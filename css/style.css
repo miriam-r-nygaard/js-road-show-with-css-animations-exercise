@@ -8,6 +8,12 @@
    - px: billedstørrelser, offsets
    - farver + font
 --------------------------------------------------------- */
+/* sat ind på grund af Chat*/
+html,
+body {
+  height: 100%;
+}
+
 :root {
   --font-body: "Poppins", sans-serif;
 
@@ -41,7 +47,7 @@
 /* ---------------------------------------------------------
    Scene
 --------------------------------------------------------- */
-scene {
+.scene {
   position: relative;
   height: 100%;
   overflow: hidden; /*overflow skal selv undersøge*/
@@ -90,6 +96,15 @@ scene {
   animation: animationBg 17s linear infinite;
 }
 
+/* sat ind på grund af Chat*/
+@keyframes animationBg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100vw 0;
+  }
+}
 /* :before skal selv undersøge hvad er*/
 .scene.night .sun:before {
   content: ""; /*skal selv undersøge hvad er*/
